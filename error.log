@@ -1,0 +1,18 @@
+[07-Jun-2018 11:12:37] PHP Warning:  PHP Startup: Invalid library (maybe not a PHP library) 'php_pdo_oci8.dll'  in Unknown on line 0
+[07-Jun-2018 11:12:38] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\Program Files (x86)\PHP\ext\php_pgsql.dll' - Não foi possível encontrar o módulo especificado.
+ in Unknown on line 0
+[07-Jun-2018 11:12:42] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\Program Files (x86)\PHP\ext\php_pdo_sqlite_external.dll' - Não foi possível encontrar o módulo especificado.
+ in Unknown on line 0
+[07-Jun-2018 11:12:42] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\Program Files (x86)\PHP\ext\php_pdo_ibm.dll' - Não foi possível encontrar o módulo especificado.
+ in Unknown on line 0
+[07-Jun-2018 11:12:42] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\Program Files (x86)\PHP\ext\php_pdo_informix.dll' - Não foi possível encontrar o módulo especificado.
+ in Unknown on line 0
+[07-Jun-2018 15:17:12] PHP Warning:  PHP Startup: Invalid library (maybe not a PHP library) 'php_pdo_oci8.dll'  in Unknown on line 0
+[07-Jun-2018 15:17:17] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\Program Files (x86)\PHP\ext\php_pgsql.dll' - Não foi possível encontrar o módulo especificado.
+ in Unknown on line 0
+[07-Jun-2018 15:17:20] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\Program Files (x86)\PHP\ext\php_pdo_sqlite_external.dll' - Não foi possível encontrar o módulo especificado.
+ in Unknown on line 0
+[07-Jun-2018 15:17:21] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\Program Files (x86)\PHP\ext\php_pdo_ibm.dll' - Não foi possível encontrar o módulo especificado.
+ in Unknown on line 0
+[07-Jun-2018 15:17:21] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\Program Files (x86)\PHP\ext\php_pdo_informix.dll' - Não foi possível encontrar o módulo especificado.
+ in Unknown on line 0

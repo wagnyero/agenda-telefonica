@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/OI/PHP/htdocs/aplicacao/agenda-telefonica/application/layouts/scripts/layout.phtml</file>
+            <file>file:/D:/OI/PHP/htdocs/aplicacao/agenda-telefonica/public/index.php</file>
+            <file>file:/D:/OI/PHP/htdocs/aplicacao/agenda-telefonica/public/js/dashboard/dashboard.js</file>
+            <file>file:/D:/OI/PHP/htdocs/aplicacao/agenda-telefonica/public/js/agenda/formCadastrarGrupo.js</file>
+            <file>file:/D:/OI/PHP/htdocs/aplicacao/agenda-telefonica/application/models/Agenda.php</file>
+            <file>file:/D:/OI/PHP/htdocs/aplicacao/agenda-telefonica/application/models/Generico.php</file>
+            <file>file:/D:/OI/PHP/htdocs/aplicacao/agenda-telefonica/application/views/scripts/agenda/formcadastrar.phtml</file>
+            <file>file:/D:/OI/PHP/htdocs/aplicacao/agenda-telefonica/application/controllers/AgendaController.php</file>
+            <file>file:/D:/OI/PHP/htdocs/aplicacao/agenda-telefonica/application/views/scripts/agenda/formcadastrargrupo.phtml</file>
+            <file>file:/D:/OI/PHP/htdocs/aplicacao/agenda-telefonica/public/js/agenda/formCadastrar.js</file>
+        </group>
+    </open-files>
+</project-private>

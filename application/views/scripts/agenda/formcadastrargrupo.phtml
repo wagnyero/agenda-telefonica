@@ -1,0 +1,45 @@
+<script src="/aplicacao/agenda-telefonica/public/js/agenda/formCadastrarGrupo.js" type="text/javascript"></script>
+<script>
+    CadastrarGrupo.init();
+</script>
+<div class="container-fluid">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="#">Agenda</a>
+      </li>
+      <li class="breadcrumb-item active">Criar Grupo</li>
+    </ol>
+</div>
+
+<div class="container">
+    <form class="form-validation" novalidate>
+        <div class="card">
+            <div class="card-header">Novo Grupo</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label class="font-weight-bold text-muted">Nome do Grupo</label>
+                        <input type="text" class="form-control form-control-sm" name="txtNomeGrupo" id="txtNomeGrupo" required />
+                        <div class="invalid-feedback">
+                            Campo obrigatório.
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <button type="button" id="btnCadastrarGrupo" class="btn btn-sm btn-dark">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Sticky Footer -->
+<footer class="sticky-footer">
+  <div class="container my-auto">
+    <div class="copyright text-center my-auto">
+      <span>Development - Wagner Lamoglia 021976003581</span>
+    </div>
+  </div>
+</footer>

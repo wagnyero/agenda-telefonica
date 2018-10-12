@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html lang="pt">
+<head>
+     <meta charset="utf-8">
+	<?php 
+        echo $this->headTitle(APPLICATION_TITLE); 
+        
+        echo $this->headMeta()->appendHttpEquiv('expires', 'Wed, 26 Feb 1997 08:21:57 GMT')
+                              ->appendHttpEquiv('viewport', 'width=device-width, initial-scale=1, shrink-to-fit=no')
+                              ->appendHttpEquiv('pragma', 'no-cache')
+                              ->appendHttpEquiv('Cache-Control', 'no-cache')
+                              ->appendHttpEquiv('X-UA-Compatible', 'IE=edge');
+        
+        echo $this->headLink()->appendStylesheet('/aplicacao/'.APPLICATION_NAME.'/public/js/vendor/bootstrap/css/bootstrap.min.css')
+                            ->appendStylesheet('/aplicacao/'.APPLICATION_NAME.'/public/js/vendor/fontawesome-free/css/all.min.css')
+                            ->appendStylesheet('/aplicacao/'.APPLICATION_NAME.'/public/js/vendor/datatables/dataTables.bootstrap4.css')
+                            ->appendStylesheet('/aplicacao/'.APPLICATION_NAME.'/public/css/sb-admin.css');
+        
+        
+		
+                
+    ?>
+	<script>
+	var url = '<?php echo ROOT_PATH; ?>';
+	</script>
+</head>
+<body id="page-top">
+<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+      <a class="navbar-brand mr-1" href="index.php">Menu</a>
+      <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <ul class="sidebar navbar-nav">
+        <li class="nav-item active">
+        <a class="nav-link" href="index.php">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Agenda</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a id="menuNovoGrupo" class="dropdown-item" href="#">Criar Grupo</a>
+            <a id="menuNovoContato" class="dropdown-item" href="#">Novo Contato</a>
+            <a class="dropdown-item" href="tables.html">Visualizar Contatos</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="charts.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Charts</span></a>
+        </li>
+      </ul>
+
+      <div id="content-wrapper">
+
+        <div class="container-fluid">
+
+          <!-- Breadcrumbs-->
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">Informa&ccedil;&otilde;es Gerais</li>
+          </ol>
+
+          <!-- Icon Cards-->
+          <div class="row">
+            <div class="col-xl-3 col-sm-6 mb-3">
+              <div class="card text-white bg-primary o-hidden h-100">
+                <div class="card-body">
+                  <div class="card-body-icon">
+                    <i class="fas fa-fw fa-comments"></i>
+                  </div>
+                <div id="divTotalContatos" class="mr-5"></div>
+                </div>
+                <a class="card-footer text-white clearfix small z-1" href="#">
+                  <span class="float-left">Ver Detalhes</span>
+                  <span class="float-right">
+                    <i class="fas fa-angle-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 mb-3">
+              <div class="card text-white bg-warning o-hidden h-100">
+                <div class="card-body">
+                  <div class="card-body-icon">
+                    <i class="fas fa-fw fa-list"></i>
+                  </div>
+                  <div id="divTotalGrupo" class="mr-5"></div>
+                </div>
+                <a class="card-footer text-white clearfix small z-1" href="#">
+                  <span class="float-left">Ver Detalhes</span>
+                  <span class="float-right">
+                    <i class="fas fa-angle-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 mb-3">
+              <div class="card text-white bg-success o-hidden h-100">
+                <div class="card-body">
+                  <div class="card-body-icon">
+                    <i class="fas fa-fw fa-shopping-cart"></i>
+                  </div>
+                  <div class="mr-5"></div>
+                </div>
+                <a class="card-footer text-white clearfix small z-1" href="#">
+                  <span class="float-left">Ver Detalhes</span>
+                  <span class="float-right">
+                    <i class="fas fa-angle-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 mb-3">
+              <div class="card text-white bg-danger o-hidden h-100">
+                <div class="card-body">
+                  <div class="card-body-icon">
+                    <i class="fas fa-fw fa-life-ring"></i>
+                  </div>
+                  <div class="mr-5"></div>
+                </div>
+                <a class="card-footer text-white clearfix small z-1" href="#">
+                  <span class="float-left">Ver Detalhes</span>
+                  <span class="float-right">
+                    <i class="fas fa-angle-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Area Chart Example-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fas fa-chart-area"></i>
+              Quantidade de Contatos por Grupo</div>
+            <div class="card-body">
+              <canvas id="myAreaChart" width="100%" height="30"></canvas>
+            </div>
+            <div class="card-footer small text-muted">Atualizado em <?php echo date("d/m/Y H:m:s"); ?></div>
+          </div>
+
+          <!-- DataTables Example -->
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fas fa-table"></i>
+              Lista de Contatos</div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Nome Contato</th>
+                      <th>Telefone</th>
+                      <th>Email</th>
+                      <th>Grupo</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>ID</th>
+                      <th>Nome Contato</th>
+                      <th>Telefone</th>
+                      <th>Email</th>
+                      <th>Grupo</th>
+                    </tr>
+                  </tfoot>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+            <div class="card-footer small text-muted">Atualizado em <?php echo date("d/m/Y H:m:s"); ?></div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Development - Wagner Lamoglia 021976003581</span>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+      <!-- /.content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+     
+
+<?php
+echo $this->inlineScript()->appendFile('/aplicacao/'.APPLICATION_NAME.'/public/js/vendor/jquery/jquery.min.js')
+		->appendFile('/aplicacao/'.APPLICATION_NAME.'/public/js/vendor/bootstrap/js/bootstrap.bundle.min.js')
+		->appendFile('/aplicacao/'.APPLICATION_NAME.'/public/js/vendor/jquery-easing/jquery.easing.min.js')
+		->appendFile('/aplicacao/'.APPLICATION_NAME.'/public/js/vendor/chart.js/Chart.min.js')
+		->appendFile('/aplicacao/'.APPLICATION_NAME.'/public/js/vendor/datatables/jquery.dataTables.js')
+		->appendFile('/aplicacao/'.APPLICATION_NAME.'/public/js/vendor/datatables/dataTables.bootstrap4.js')
+		->appendFile('/aplicacao/'.APPLICATION_NAME.'/public/js/vendor/jquery/jquery.mask.js')
+		->appendFile('/aplicacao/'.APPLICATION_NAME.'/public/js/sb-admin.min.js')
+		->appendFile('/aplicacao/'.APPLICATION_NAME.'/public/js/dashboard/dashboard.js');
+?>
+<script>
+    Dashboard.init();
+</script>
+</body>
+</html>
