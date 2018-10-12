@@ -66,7 +66,7 @@ require_once 'Zend/Application.php';
 
 $application = new Zend_Application(
     APPLICATION_ENV,
-    APPLICATION_PATH . '../../../../config/configAgendaTelefonica.ini'
+    APPLICATION_PATH . '/config/configAgendaTelefonica.ini'
 );
 
 $application->bootstrap()->run();

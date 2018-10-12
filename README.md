@@ -1,6 +1,6 @@
-# [RELEASE NOTES](
+# [RELEASE NOTES]
 
-[BANCO MYSQL]
+## BANCO MYSQL
 
 CREATE SCHEMA `agenda` ;
 
@@ -25,9 +25,17 @@ CREATE TABLE `agenda`.`grupo` (
     ON UPDATE NO ACTION);
 
 
-## Preview
+## Instalação
 
-[![SB Admin Preview](https://startbootstrap.com/assets/img/templates/sb-admin.jpg)](https://blackrockdigital.github.io/startbootstrap-sb-admin/)
+Utilização do Zend Framework 1.11.11
+
+* Necessário ter a seguinte hierarquia de pasta para rodar o zend: ..\htdocs\biblioteca\php\zend\zend-1.11.11\
+* Necessário ter a seguinte hierarquia de pasta para a aplicacao: ..\htdocs\aplicacao\
+* Mover a pasta \htdocs\aplicacao\zend-1.11.11\ para \htdocs\biblioteca\php\zend\zend-1.11.11\
+
+* Configurar conexão de banco de dados no arquivo /config/configAgendaTelefonica.ini
+
+
 
 **[View Live Preview](https://blackrockdigital.github.io/startbootstrap-sb-admin/)**
 
